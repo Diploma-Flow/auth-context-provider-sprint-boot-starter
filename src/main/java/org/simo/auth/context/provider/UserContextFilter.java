@@ -25,7 +25,6 @@ public class UserContextFilter implements WebFilter {
         String userEmail = exchange.getRequest().getHeaders().getFirst("X-User-Email");
         String userRole = exchange.getRequest().getHeaders().getFirst("X-User-Role");
 
-        // Populate RequestContext with extracted details
         RequestContext requestContext = RequestContextHolder.getContext();
         requestContext.setUserEmail(userEmail);
         requestContext.setUserRole(userRole);
@@ -33,7 +32,6 @@ public class UserContextFilter implements WebFilter {
         log.debug("Added context for user: {}",userEmail);
 
         return chain.filter(exchange).doFinally(signalType -> {
-            // Clear the context after the request is completed
             RequestContextHolder.clear();
             log.debug("Cleared user context");
         });

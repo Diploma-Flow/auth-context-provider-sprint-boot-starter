@@ -24,7 +24,6 @@ public class RequestContextInterceptor implements HandlerInterceptor {
         String userEmail = request.getHeader("X-User-Email");
         String userRole = request.getHeader("X-User-Role");
 
-        // Populate RequestContext with extracted details
         RequestContext requestContext = RequestContextHolder.getContext();
         requestContext.setUserEmail(userEmail);
         requestContext.setUserRole(userRole);

@@ -27,7 +27,7 @@
 
     <groupId>org.simo.acp</groupId>
     <artifactId>auth-context-provider-sprint-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>auth-context-provider-sprint-boot-starter</name>
     <description>auth-context-provider-sprint-boot-starter</description>
 
